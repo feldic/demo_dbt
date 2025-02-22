@@ -3,9 +3,9 @@ version: 2
 
 models:
   - name: fct_games
-    description: "A starter dbt model"
     sources:
-      - name: fct_games  # Logical name for the source
+      - name: raw_events  # Logical name for the source
         database: playperfect-451608  # Your BigQuery project ID
+        schema: play_perfect_dataset
         tables:
           - name: pp_events  # Your source table
